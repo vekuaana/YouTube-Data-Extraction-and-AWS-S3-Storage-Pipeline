@@ -44,7 +44,7 @@ API_KEY_YOUTUBE_API=your_api_key_here
 ```
 
 ## Usage
-To run the script and start extracting data:
+The script `main.py` contains all the functions to extract youtube data from the Youtube Data API. To run the script and start extracting data:
 1. Extract Channel Information
 This function retrieves basic details about a YouTube channel base in the youtube channel id, including the channel name, description, view count, subscriber count, video count, and the ID of the uploads playlist.
 ```
@@ -64,7 +64,7 @@ video_comments = get_video_comments(videos_info)
 ```
 
 ## S3 Integration
-Use the `main.py` script to integrates with AWS S3 to upload the extracted data. Remember that you need to create the S3 bucket beforehand for this use case:
+Use the `main.py` script to integrate with AWS S3 the extracted data. Remember that you need to create the S3 bucket beforehand for this use case:
 
 - Bucket Name: 'your bucket name'
 - Files Uploaded:
@@ -84,16 +84,4 @@ The script includes robust error handling to manage issues such as:
 - API Errors: Handles HTTP errors returned by the YouTube API, including quota exceeded errors.
 - AWS S3 Errors: Catches issues related to AWS credentials or other S3-specific errors.
 - General Exceptions: Catches and logs unexpected errors during script execution.
-
-
-
-
-Here are some guide questions that will help you out:
-
-What was your motivation?
-Why did you build this project?
-What problem does it solve?
-What did you learn?
-What makes your project stand out? If your project has a lot of features, consider adding a "Features" section and listing them here.
-
 
