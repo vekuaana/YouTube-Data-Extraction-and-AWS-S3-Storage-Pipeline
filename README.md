@@ -1,7 +1,14 @@
 # YouTube Data Extraction and AWS S3 Integration
 
+## Introduction
 This project retrieves information from YouTube channels including channel's details, videos's details and video's comment using the Youtube Data API. The data extracted is then uploaded to an AWS S3 bucket for storage.
 
+ ### Key Features
+- Extract detailed information from YouTube channels and videos.
+- Collect top-level comments and replies from videos.
+- Store extracted data in JSON format and upload it to AWS S3.
+- Robust error handling and logging for seamless operation.
+  
 ## Table of Contents
 - Prerequisites
 - Setup
@@ -14,6 +21,7 @@ This project retrieves information from YouTube channels including channel's det
 - Example Execution
 - Logging
 - Error Handling
+- Results
 
 ## Prerequisites 
 Before running this project, ensure you have the following:
@@ -84,4 +92,55 @@ The script includes robust error handling to manage issues such as:
 - API Errors: Handles HTTP errors returned by the YouTube API, including quota exceeded errors.
 - AWS S3 Errors: Catches issues related to AWS credentials or other S3-specific errors.
 - General Exceptions: Catches and logs unexpected errors during script execution.
+  ## Results
+Snippets of the results are displayed below
+- channel_info.json
+    {    "channel_name": "StatQuest with Josh Starmer",
+        "description": "Statistics, Machine Learning and Data Science can sometimes seem like very scary topics, but since each technique is really just a combination of small and simple steps, they are actually quite simple. My goal with StatQuest is to break down the major methodologies into easy to understand pieces. That said, I don't dumb down the material. Instead, I build up your understanding so that you are smarter.\n\nContact, Video Index, Etc: https://statquest.org",
+        "viewcount": "68188122",
+        "subscribers": "1230000",
+        "videocount": "281",
+        "uploads_playlist_id": "UUtYLUTtgS3k1Fg4y5tAhLbw"
+    }
+- videos_info.json
+  {
+        "channel_name": "StatQuest with Josh Starmer",
+        "video_id": "wIGOnM6Cf_E",
+        "title": "Human Stories in AI: Abbas Merchant@Matics Analytics",
+        "description": "In this episode we have special guest Abbas Merchant, Founder and CEO of Matics Analytics, which uses a combination of AI and analytics to transform enterprise data into intelligent actions.\n\nIf you'd like to support StatQuest, please consider...\nPatreon: https://www.patreon.com/statquest\n...or...\nYouTube Membership: https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw/join\n\n...buying my book, a study guide, a t-shirt or hoodie, or a song from the StatQuest store...\nhttps://statquest.org/statquest-store/\n\n...or just donating to StatQuest!\npaypal: https://www.paypal.me/statquest\nvenmo: @JoshStarmer\n\nLastly, if you want to keep up with me as I research and create new StatQuests, follow me on twitter:\nhttps://twitter.com/joshuastarmer\n\n#StatQuest",
+        "viewcount": "4997",
+        "likecount": "105",
+        "commentcount": "23"
+    }
+- videos_comments.json
+{
+  "video_id": "dQw4w9WgXcQ",
+  "comments": [
+    {
+      "comment_id": "UgxH0HSRJyJzT6k5z014AaABAg",
+      "author": "John Doe",
+      "text": "Great explanation! Really helped me understand p-values.",
+      "like_count": 23,
+      "published_at": "2022-01-16T14:25:00Z",
+      "replies": []
+    },
+    {
+      "comment_id": "UgyO2QfYoeYt_1W-YkF4AaABAg",
+      "author": "Jane Smith",
+      "text": "Can you do a video on confidence intervals?",
+      "like_count": 15,
+      "published_at": "2022-01-16T15:30:00Z",
+      "replies": [
+        {
+          "comment_id": "UgyGzXfWGRvY3_4Bz015AaABAg",
+          "author": "StatQuest with Josh Starmer",
+          "text": "Sure! That's on my list for the next video.",
+          "like_count": 5,
+          "published_at": "2022-01-16T16:45:00Z"
+        }
+      ]
+    }
+  ]
+}
 
+  
