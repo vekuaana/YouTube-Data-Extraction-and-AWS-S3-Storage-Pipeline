@@ -95,15 +95,15 @@ The script includes robust error handling to manage issues such as:
   ## Results
 Snippets of the results are displayed below
 - channel_info.json
-    {    "channel_name": "StatQuest with Josh Starmer",
+    ```{    "channel_name": "StatQuest with Josh Starmer",
         "description": "Statistics, Machine Learning and Data Science can sometimes seem like very scary topics, but since each technique is really just a combination of small and simple steps, they are actually quite simple. My goal with StatQuest is to break down the major methodologies into easy to understand pieces. That said, I don't dumb down the material. Instead, I build up your understanding so that you are smarter.\n\nContact, Video Index, Etc: https://statquest.org",
         "viewcount": "68188122",
         "subscribers": "1230000",
         "videocount": "281",
         "uploads_playlist_id": "UUtYLUTtgS3k1Fg4y5tAhLbw"
-    }
+    }```
 - videos_info.json
-  {
+  ```{
         "channel_name": "StatQuest with Josh Starmer",
         "video_id": "wIGOnM6Cf_E",
         "title": "Human Stories in AI: Abbas Merchant@Matics Analytics",
@@ -111,9 +111,9 @@ Snippets of the results are displayed below
         "viewcount": "4997",
         "likecount": "105",
         "commentcount": "23"
-    }
+    }```
 - videos_comments.json
-{
+```{
   "video_id": "dQw4w9WgXcQ",
   "comments": [
     {
@@ -141,6 +141,6 @@ Snippets of the results are displayed below
       ]
     }
   ]
-}
+}```
 
   
